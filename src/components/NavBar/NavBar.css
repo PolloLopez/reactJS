@@ -10,10 +10,10 @@
 }
 
 .secciones {
-    text-align: center;
+    text-decoration: none;
+    font-size: 2rem;
 }
 
 .items {
-    color: black;
-    font-size: 1.5em;
+    text-transform: uppercase;
 }

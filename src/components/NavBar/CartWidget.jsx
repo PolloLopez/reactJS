@@ -1,13 +1,13 @@
-import { FiShoppingCart } from "react-icons/fi";
+import { ImCart } from "react-icons/im";
 
 
 const CartWidget = () => {
-return (
+  return (
     <div>
-        <FiShoppingCart size={25}/>
-        <p>1</p>
+      <ImCart size={50}/>
+      <p>1</p>
     </div>
-)
-}
+  );
+};
 
-export default CartWidget
+export default CartWidget;

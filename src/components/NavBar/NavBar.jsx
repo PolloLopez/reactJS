@@ -1,5 +1,5 @@
 import logoParamo from "../../img/logoParamo.png"
-import CartWidget from "./CartWidget.jsx"
+import CartWidget from "./CartWidget"
 
 import "./NavBar.css"
 
