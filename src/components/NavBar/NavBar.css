@@ -7,6 +7,8 @@
     margin: .5rem;
     border: 1px solid black;
     font-size: 1em;
+    color: white;
+    text-decoration: none;
 }
 
 .secciones {
@@ -16,4 +18,12 @@
 
 .items {
     text-transform: uppercase;
+}
+category {
+    background-color: red;
+}
+
+.img-category {
+    justify-content: space-between;
+    align-items: center;
 }
