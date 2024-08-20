@@ -1,0 +1,56 @@
+.imagen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45vh;
+}
+
+.carritoGeneral {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5vh;
+}
+
+.carritoProducto {
+    display: flex;
+    align-items: center;
+}
+
+.carritoItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carritoVacio{
+font-size: 3em;
+margin: auto;
+padding: 10vh;
+
+}
+.btn {
+    display: flex;
+    padding: .25em;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    background-color: #500550f6;
+    border: 1px solid black;
+    justify-content: center;    /* Alineación horizontal */
+    align-items: center;     /* Alineación vertical */
+    font-size: 1.2em;
+    margin: auto;
+    width: fit-content;    /* se adapta al ancho del contenido */
+    cursor: pointer;
+
+    &:hover {
+        background-color: white;
+        color: #500550f6;
+        font-weight: 700;
+        border: 2px solid black;
+    }
+}
+
+
+.VaciarCarrito {
+    width: 25vh;
+}

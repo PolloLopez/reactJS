@@ -1,49 +1,168 @@
 const productos = [
-    {
-      id:"corderoConPielLobo",
-      nombre:"Cordero con piel de lobo - Cavernet Franc",
-      descripcion:"el que nunca falla",
-      categoria: "vinos",
-      precio: 100,
-      stock: 12,
-      imagen:"https://acdn.mitiendanube.com/stores/002/262/464/products/cplcabsauvignonx611-df420050c4edade1db16611845770956-1024-1024.webp",
-    },
-    {
-      id:"perroCallejero",
-      nombre:"Perro Callejero - Malbec",
-      descripcion:"No falla y te hace quedar de 10",
-      categoria: "vinos",
-      precio: 100,
-      stock: 8,
-      imagen:"https://acdn.mitiendanube.com/stores/002/262/464/products/pcmalbecx61-ce7a3fa707be55239416674918419673-1024-1024.webp",
-    },
-    {
-      id:"blueLabel700",
-      nombre:"El verdadero elixir",
-      descripcion:"Johnnie Walker Blue Label establece un estándar con capas de sabor y barricas seleccionadas a mano de todas las regiones de destilación de Escocia. Sus aromas son influenciados por el humo del oeste y los ricos whiskies del este.",
-      categoria: "destilados",
-      precio: 300,
-      stock: 4,
-      imagen:"https://http2.mlstatic.com/D_NQ_NP_860995-MLU75051137870_032024-O.webp",
-    },
-    {
-      id:"sacacorcho2mov",
-      nombre:"Sacacorchos dos movimientos",
-      descripcion:"Doble Función: Este saca corcho no solo te ayuda a descorchar tus botellas de vino con facilidad, sino que también cuenta con un destapador de botellas integrado, ¡perfecto para abrir tus bebidas favoritas! Diseño Compacto: Con medidas de 12.5 x 2.2 cm, es lo suficientemente compacto para guardar en tu cocina o llevar contigo a cualquier reunión.Color Negro: Su elegante color negro agrega un toque de sofisticación a tu colección de utensilios de cocina o bar.",
-      categoria: "regaleria",
-      precio: 140,
-      stock: 2,
-      imagen:"https://http2.mlstatic.com/D_NQ_NP_898862-MLA75230784710_032024-O.webp",
-    }
-  ]
+  // Vinos Tintos
+  {
+    id: "malbecReserva",
+    nombre: "Malbec Reserva - Bodega Norton",
+    descripcion: "Vino de intenso color rojo violáceo. Aromas a frutas negras, como moras y ciruelas, con notas a vainilla y cacao. En boca es sedoso, con taninos redondos y un final largo.",
+    categoria: "vinos",
+    subcategoria: "tintos",
+    precio: 120,
+    stock: 15,
+    imagen: "https://via.placeholder.com/150x200?text=Malbec+Reserva",
+  },
+  {
+    id: "cabernetSauvignon",
+    nombre: "Cabernet Sauvignon - Rutini",
+    descripcion: "Vino con aromas intensos a frutos rojos y especias. En boca presenta una estructura elegante con taninos firmes y un final persistente.",
+    categoria: "vinos",
+    subcategoria: "tintos",
+    precio: 150,
+    stock: 10,
+    imagen: "https://via.placeholder.com/150x200?text=Cabernet+Sauvignon",
+  },
+  {
+    id: "blendPremium",
+    nombre: "Blend Premium - Catena Zapata",
+    descripcion: "Un corte de Malbec, Cabernet Sauvignon y Petit Verdot. Complejo, con aromas a frutos negros, chocolate y tabaco. Gran cuerpo y un final prolongado.",
+    categoria: "vinos",
+    subcategoria: "tintos",
+    precio: 180,
+    stock: 8,
+    imagen: "https://via.placeholder.com/150x200?text=Blend+Premium",
+  },
+  {
+    id: "pinotNoir",
+    nombre: "Pinot Noir - Luigi Bosca",
+    descripcion: "Elegante y suave, con notas a frutillas, cerezas y especias dulces. En boca es redondo, con un final aterciopelado.",
+    categoria: "vinos",
+    subcategoria: "tintos",
+    precio: 160,
+    stock: 12,
+    imagen: "https://via.placeholder.com/150x200?text=Pinot+Noir",
+  },
 
-  const obtenerProductos =() => {
-    return new Promise( (resolve, reject) => {
-      //simulamos un retraso de red
-      setTimeout( () => {
-          resolve(productos)
-      }, 2000);
-    });
-  };
+  // Vinos Blancos
+  {
+    id: "chardonnayAlta",
+    nombre: "Chardonnay Alta - Catena Zapata",
+    descripcion: "Vino de color dorado con reflejos verdosos. Aromas a frutas tropicales y manteca, con un toque de roble. En boca es fresco y con un final cremoso.",
+    categoria: "vinos",
+    subcategoria: "blancos",
+    precio: 140,
+    stock: 12,
+    imagen: "https://via.placeholder.com/150x200?text=Chardonnay+Alta",
+  },
+  {
+    id: "sauvignonBlanc",
+    nombre: "Sauvignon Blanc - Andeluna",
+    descripcion: "Aromas cítricos y herbales, con un paladar fresco y vibrante. Perfecto para maridar con pescados y mariscos.",
+    categoria: "vinos",
+    subcategoria: "blancos",
+    precio: 110,
+    stock: 20,
+    imagen: "https://via.placeholder.com/150x200?text=Sauvignon+Blanc",
+  },
+  {
+    id: "torronteSalta",
+    nombre: "Torrontés - Bodega Colomé",
+    descripcion: "De color amarillo pálido, con aromas florales y cítricos. En boca es fresco, ligero y aromático, con un final agradable.",
+    categoria: "vinos",
+    subcategoria: "blancos",
+    precio: 130,
+    stock: 18,
+    imagen: "https://via.placeholder.com/150x200?text=Torront%C3%A9s",
+  },
 
-  export default obtenerProductos
+  // Espumantes
+  {
+    id: "espumanteBrut",
+    nombre: "Espumante Brut - Chandon",
+    descripcion: "Burbujeante y elegante. Aromas a manzana verde y cítricos, con un sabor equilibrado y un final fresco.",
+    categoria: "vinos",
+    subcategoria: "espumantes",
+    precio: 130,
+    stock: 25,
+    imagen: "https://via.placeholder.com/150x200?text=Espumante+Brut",
+  },
+  {
+    id: "espumanteRose",
+    nombre: "Espumante Rosé - Chandon",
+    descripcion: "Delicado color rosa con burbujas finas. Aromas a frutillas y cerezas, con un paladar fresco y vivaz.",
+    categoria: "vinos",
+    subcategoria: "espumantes",
+    precio: 140,
+    stock: 18,
+    imagen: "https://via.placeholder.com/150x200?text=Espumante+Ros%C3%A9",
+  },
+
+  // Destilados
+  {
+    id: "whiskyJackDaniels",
+    nombre: "Whisky Jack Daniel's",
+    descripcion: "Whisky americano de Tennessee, con un perfil suave y ligeramente ahumado. Perfecto para disfrutar solo o en cócteles.",
+    categoria: "destilados",
+    precio: 250,
+    stock: 10,
+    imagen: "https://via.placeholder.com/150x200?text=Jack+Daniel's",
+  },
+  {
+    id: "vodkaAbsolut",
+    nombre: "Vodka Absolut",
+    descripcion: "Vodka sueco puro y suave. Ideal para cócteles clásicos como el Bloody Mary o Vodka Tonic.",
+    categoria: "destilados",
+    precio: 200,
+    stock: 30,
+    imagen: "https://via.placeholder.com/150x200?text=Absolut+Vodka",
+  },
+  {
+    id: "ginHendricks",
+    nombre: "Gin Hendrick's",
+    descripcion: "Gin escocés infusionado con pepino y pétalos de rosa. Fresco, floral y único en su sabor.",
+    categoria: "destilados",
+    precio: 300,
+    stock: 15,
+    imagen: "https://via.placeholder.com/150x200?text=Hendrick's+Gin",
+  },
+
+  // Regalería y Accesorios
+  {
+    id: "setVinoPremium",
+    nombre: "Set de Vino Premium",
+    descripcion: "Incluye sacacorchos profesional, cortador de cápsulas, anillo antigoteo y termómetro de vino. Todo en un elegante estuche de madera.",
+    categoria: "regaleria",
+    precio: 220,
+    stock: 5,
+    imagen: "https://via.placeholder.com/150x200?text=Set+de+Vino",
+  },
+  {
+    id: "decantadorCristal",
+    nombre: "Decantador de Cristal",
+    descripcion: "Decantador de vidrio soplado, ideal para oxigenar vinos tintos y realzar sus aromas y sabores.",
+    categoria: "regaleria",
+    precio: 180,
+    stock: 12,
+    imagen: "https://via.placeholder.com/150x200?text=Decantador",
+  },
+  {
+    id: "copasCristal",
+    nombre: "Juego de Copas de Cristal",
+    descripcion: "Set de 6 copas de cristal fino, diseñadas para vinos tintos, con un diseño elegante y sofisticado.",
+    categoria: "regaleria",
+    precio: 90,
+    stock: 20,
+    imagen: "https://via.placeholder.com/150x200?text=Copas+de+Cristal",
+  },
+];
+
+
+const obtenerProductos = () => {
+  return new Promise((resolve, reject) => {
+    
+    // retrasar base de datos
+    setTimeout(() => {
+      resolve(productos);
+    }, 2000);
+  });
+};
+
+export default obtenerProductos;

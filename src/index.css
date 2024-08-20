@@ -3,10 +3,13 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: rgb(167, 137, 167);
 }
-
-a{
+a {
   color: white;
   text-decoration: none;
+}
+
+body{
+  color: white;
+  background-color: #720172af;
 }

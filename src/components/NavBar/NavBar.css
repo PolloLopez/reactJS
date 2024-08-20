@@ -1,29 +1,59 @@
 .navBar {
-    background-color: #5a035a8c;
+    background-color: #500550f6;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    margin: .5rem;
-    border: 1px solid black;
+    padding: .5rem;
     font-size: 1em;
     color: white;
     text-decoration: none;
 }
 
-.secciones {
-    text-decoration: none;
-    font-size: 2rem;
+.categories {
+    display: flex;
+    font-size: 1em;
 }
 
-.items {
-    text-transform: uppercase;
+.categories p {
+    display: flex;
+    font-size: 1em;
+    align-items: center;
+    justify-content: center;
 }
-category {
-    background-color: red;
+
+.category {
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 1em;
+    padding: .5em;
+    margin: .2em;
+    background-color:#70047067;
 }
 
 .img-category {
-    justify-content: space-between;
+    display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+.cartwidget{
+    align-items: center;
+    justify-content: center;
+    margin-right: 1em;
+}
+
+.cartwidget p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+}
+.iconViolet{
+    color: #ff08ff7e;
+}
+
+.iconWhite{
+    color: white;
 }

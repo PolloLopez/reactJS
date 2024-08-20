@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import obtenerProductos from "../../data/data.js";
 import ItemDetail from "./ItemDetail.jsx";
 import { useParams } from "react-router-dom";
+import "../ItemListContainer/ItemListContainer.css"
 
 const ItemDetailContainer = () => {
     const [producto, setProducto] = useState(null);
@@ -19,7 +20,7 @@ const ItemDetailContainer = () => {
     }, [idProducto]);
 
     if (!producto) {
-        return <div>Cargando...</div>;
+        return <div className="cargando">Cargando...</div>;
     }
 
     return <ItemDetail producto={producto} />;

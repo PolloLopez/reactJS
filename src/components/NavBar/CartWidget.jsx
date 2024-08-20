@@ -1,12 +1,18 @@
 import { ImCart } from "react-icons/im";
-
+import { CartContext } from "../../context/CartContext";
+import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 const CartWidget = () => {
+  const { cantidadTotal } = useContext(CartContext)
+
+  let cantidad = cantidadTotal()
+
   return (
-    <div>
-      <ImCart size={50}/>
-      <p>1</p>
-    </div>
+    <Link to="/cart" className="cartwidget">
+      <ImCart size={50} className={ cantidad === 0 ? "iconViolet" : "iconWhite"}  />
+      <p>{ cantidad > 0 && cantidad }</p>
+    </Link>
   );
 };
 
