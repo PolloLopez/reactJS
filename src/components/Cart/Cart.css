@@ -14,43 +14,51 @@
 .carritoProducto {
     display: flex;
     align-items: center;
+    gap: 2vh;
+    padding: 1em;
+    border-bottom: 1ox solid #ddd;
 }
 
 .carritoItem {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    gap: .5em;
 }
 
-.carritoVacio{
-font-size: 3em;
-margin: auto;
-padding: 10vh;
-
+.carritoVacio {
+    font-size: 2em;
+    margin: auto;
+    padding: 10vh;
+    text-align: center;
+    color: #888;
 }
+
 .btn {
     display: flex;
-    padding: .25em;
-    border-radius: 5px;
-    color: rgb(255, 255, 255);
+    padding: .5em .5em;
+    border-radius: .5em;
+    color: white;
     background-color: #500550f6;
-    border: 1px solid black;
+    border: 1px solid transparent;
     justify-content: center;    /* Alineación horizontal */
-    align-items: center;     /* Alineación vertical */
-    font-size: 1.2em;
+    align-items: center;    /* Alineación vertical */
+    font-size: 1.1em;
+    max-width: 50%;
     margin: auto;
-    width: fit-content;    /* se adapta al ancho del contenido */
+    margin-bottom: 1em;
     cursor: pointer;
-
-    &:hover {
-        background-color: white;
-        color: #500550f6;
-        font-weight: 700;
-        border: 2px solid black;
-    }
 }
 
+.btn:hover {
+    background-color: white;
+    color: #500550f6;
+    font-weight: 700;
+    border: 1.5px solid black;
+}
 
 .VaciarCarrito {
     width: 25vh;
+    margin-top: 1em;
 }

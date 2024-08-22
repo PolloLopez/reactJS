@@ -10,11 +10,12 @@ const Item = ({ producto }) => {
         <div className="card">
             <div className="img-card">          
             <img src={producto.imagen} alt={producto.titulo} />
-            <p>{producto.nombre}</p>
-            <Link to={"/detalle/" + producto.id} className="detalles"> <p>VER DETALLES</p>
-            </Link>
+            </div>
+            <p className="tituloProducto">{producto.nombre}</p>
+            <div className="detalles-container"><Link to={"/detalle/" + producto.id} className="detalles"> <p>VER DETALLES</p>
+            </Link></div>
         </div>
-        </div>
+       
     );
 };
 

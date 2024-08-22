@@ -12,7 +12,7 @@ const NavBar = () => {
             </Link>
 
             <ul className="categories">
-                
+
                 <Link to="/categoria/vinos" className="category">
                     <p>vinos</p>
                     <div className="img-category">

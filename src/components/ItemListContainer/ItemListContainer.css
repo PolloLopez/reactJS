@@ -1,9 +1,22 @@
 .card {
-    width: 25em;
-    margin: 5em 10 em 50 em 20em;
-    border: solid 1px white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30em;
+    height: 45em;
+    border: solid 1px #ddd;
     border-radius: 1em;
-    align-items: center;
+    padding: 1em;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+.img-card {
+    flex: 1;
+    width: 100%;
+    height: 20em;
+    overflow: hidden;
+    border-radius: 1em;
 }
 
 .img-card img {
@@ -11,58 +24,82 @@
     height: 100%;
     object-fit: cover;
     border-radius: 1em;
-    align-items: center;
 }
 
-.card p {
-    font-size: 2em;
-    padding: 1em;
-}
-
-.detalles {
-    margin: 1em 2.5em;
-    width: auto;
+.imgProducto {
     display: flex;
     justify-content: center;
-    color: white;
-    background-color: #500550f6;
-    border-radius: .5em;
-    border: 2px solid black;
+    align-items: center;
+    width: 100%;
+    max-width: 50em;
+    height: auto;
+    margin: auto;
+    margin-bottom: 1em;
+    border-radius: 1em;
+    overflow: hidden;
+}
 
-    &:hover {
-        background-color: #720172af;
-        color: white;
-        font-weight: bolder;
-    }
+.imgProducto img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 1em;
 }
 
 .tituloProducto {
+    font-size: 1.2em;
+    text-align: center;
+    margin: 0.5em 0;
+    font-weight: bold;
+}
+
+.detalles-container {
     display: flex;
     justify-content: center;
-    font-size: 2em;
+    margin-top: auto;
+    /* Empuja el botón hacia abajo */
+}
+
+.detalles {
+    color: white;
+    background-color: #500550f6;
+    border-radius: .5em;
+    border: 1px solid black;
+    cursor: pointer;
+    padding: .5em .5em;
+    font-size: 1em;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-align: center;
+    width: 50%;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.detalles:hover {
+    background-color: #720172af;
+    color: white;
+    font-weight: bolder;
+}
+
+.card p {
+    font-size: 1em;
+    padding: .5em;
 }
 
 .descripcionProducto {
-    display: flex;
-    justify-content: center;
-    max-width: 70%;
-    font-size: 1.2em;
-    margin: auto;
-    padding: 5px;
+    text-align: center;
+    font-size: 1em;
+    margin: .5em 0;
 }
 
 .cantProductos {
-    display: flex;
-    justify-content: center;
+    text-align: center;
+    margin-bottom: .5em;
     font-size: 1.5em;
 }
 
 .saludo {
-    display: flex;
-    justify-content: center;
-    /* Alineación horizontal */
-    align-items: center;
-    /* Alineación vertical */
+    text-align: center;
     font-size: 2em;
     text-transform: uppercase;
     height: 5vh;
@@ -70,7 +107,7 @@
 
 .cargando {
     padding: 5px;
-    font-size: 2em;
+    font-size: 1.5em;
     margin-left: 1rem;
 }
 
@@ -80,7 +117,6 @@
     justify-content: center;
     gap: 2em;
     padding: .5em;
-    margin: 1em;
 }
 
 .contador {
@@ -88,36 +124,37 @@
     align-items: center;
     justify-content: center;
     gap: .75em;
-    font-size: 2em;
+    margin: .5em;
+    margin-bottom: 1em;
+    font-size: 1.5em;
 }
 
 .btnCount {
     font-size: 1em;
-    width: 1em;
-    border-radius: 5px;
+    width: 2em;
+    border-radius: .5em;
     border: 1px solid black;
+}
 
-    &:hover {
-        background-color: black;
-        color: white;
-    }
+.btnCount:hover {
+    background-color: black;
+    color: white;
 }
 
 .btnAgregarCount {
-    display: flex;
-    padding: .25em;
-    font-size: .5em;
+    padding: .5em 1em;
     text-transform: uppercase;
-    border-radius: 5px;
-    color: rgb(255, 255, 255);
+    border-radius: .5em;
+    color: white;
     background-color: #500550f6;
     border: 1px solid black;
-    font-size: .75em;
+    font-size: .9em;
+    cursor: pointer;
+    transition: all 0.3s ease;
 
     &:hover {
         background-color: white;
         color: #500550f6;
-        font-weight: 700;
-        border: 2px solid black;
+
     }
 }

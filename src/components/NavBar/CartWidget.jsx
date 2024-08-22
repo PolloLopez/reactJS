@@ -10,8 +10,8 @@ const CartWidget = () => {
 
   return (
     <Link to="/cart" className="cartwidget">
-      <ImCart size={50} className={ cantidad === 0 ? "iconViolet" : "iconWhite"}  />
-      <p>{ cantidad > 0 && cantidad }</p>
+      <ImCart size={50} className={cantidad === 0 ? "iconViolet" : "iconWhite"} />
+      <p>{cantidad > 0 && cantidad}</p>
     </Link>
   );
 };

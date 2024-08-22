@@ -1,59 +1,59 @@
 .navBar {
-    background-color: #500550f6;
+    background-color: #4b0e62;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: .5rem;
+    max-height: 30vh;
     font-size: 1em;
     color: white;
-    text-decoration: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .categories {
     display: flex;
+    gap: 1rem;
     font-size: 1em;
-}
-
-.categories p {
-    display: flex;
-    font-size: 1em;
-    align-items: center;
-    justify-content: center;
 }
 
 .category {
     text-transform: uppercase;
     color: white;
-    text-decoration: none;
-    border: 1px solid white;
-    border-radius: 1em;
-    padding: .5em;
-    margin: .2em;
-    background-color:#70047067;
+    padding: 0.5em .5em;
+    border-radius: .5em;
+    border-radius: 0.5em;
+    background-color: #6c0d84;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #8c10aa;
+        transform: scale(1.05);
+    }
 }
 
-.img-category {
+.cartwidget {
     display: flex;
     align-items: center;
-    justify-content: center;
-}
-
-.cartwidget{
-    align-items: center;
-    justify-content: center;
+    gap: .5rem;
     margin-right: 1em;
 }
 
 .cartwidget p {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.img-category {
     display: flex;
-    align-items: center;
     justify-content: center;
     font-size: 1.5em;
 }
-.iconViolet{
+
+.iconViolet {
     color: #ff08ff7e;
 }
 
-.iconWhite{
+.iconWhite {
     color: white;
 }
+
