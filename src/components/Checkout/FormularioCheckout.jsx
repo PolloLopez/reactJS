@@ -1,19 +1,71 @@
-const FormularioCheckout = ({ datosForm, handleChangeInput, handleSubmitForm}) => {
-    return (
-        <form onSubmit={handleSubmitForm} >
-            <label>Nombre: </label>
-            <input type="text" name="nombre" value={datosForm.nombre} onChange={handleChangeInput} />
+import React, { useState } from "react";
 
-            <label>Telefono: </label>
-            <input type="text" name="telefono" value={datosForm.telefono} onChange={handleChangeInput} />
+const FormularioCheckout = ({
+  datosForm,
+  handleChangeInput,
+  handleSubmitForm,
+}) => {
+  const [emailRepeat, setEmailRepeat] = useState("");
+  const [error, setError] = useState("");
 
-            <label>Email: </label>
-            <input type="text" name="email" value={datosForm.email} onChange={handleChangeInput} />
+  const handleEmailRepeatChange = (e) => {
+    setEmailRepeat(e.target.value);
+  };
 
-            <button type='submit' className='btn'>Enviar pedido</button>
-        </form>
-    )
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    if (datosForm.email !== emailRepeat) {
+      setError("Los emails no coinciden.");
+      return;
+    }
+    setError("");
+    handleSubmitForm(e);
+  };
 
+  return (
+    <form onSubmit={handleFormSubmit}>
+      <label>Nombre: </label>
+      <input
+        type="text"
+        name="nombre"
+        value={datosForm.nombre}
+        onChange={handleChangeInput}
+        required
+      />
+
+      <label>Teléfono: </label>
+      <input
+        type="text"
+        name="telefono"
+        value={datosForm.telefono}
+        onChange={handleChangeInput}
+        required
+      />
+
+      <label>Email: </label>
+      <input
+        type="email"
+        name="email"
+        value={datosForm.email}
+        onChange={handleChangeInput}
+        required
+      />
+
+      <label>Repetir Email: </label>
+      <input
+        type="email"
+        value={emailRepeat}
+        onChange={handleEmailRepeatChange}
+        required
+      />
+
+      {error && <p style={{ color: "red" }}>{error}</p>}
+
+      <button type="submit" className="btn">
+        Enviar pedido
+      </button>
+    </form>
+  );
 };
 
 export default FormularioCheckout;

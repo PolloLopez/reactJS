@@ -42,8 +42,10 @@
     color: white;
     background-color: #500550f6;
     border: 1px solid transparent;
-    justify-content: center;    /* Alineación horizontal */
-    align-items: center;    /* Alineación vertical */
+    justify-content: center;
+    /* Alineación horizontal */
+    align-items: center;
+    /* Alineación vertical */
     font-size: 1.1em;
     max-width: 50%;
     margin: auto;
