@@ -22,8 +22,8 @@ function App() {
           theme="light" />
 
         <Routes>
-          <Route path="/" element={<ItemListContainer saludo="Bienvenidos a la bodega" />} />
-          <Route path="/categoria/:idCategoria" element={<ItemListContainer saludo="Bienvenidos a la bodega" />} />
+          <Route path="/" element={<ItemListContainer saludo="Bienvenidos a Páramo online" />} />
+          <Route path="/categoria/:idCategoria" element={<ItemListContainer saludo="Páramo online" />} />
           <Route path="/detalle/:idProducto" element={<ItemDetailContainer />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
@@ -36,3 +36,4 @@ function App() {
 }
 
 export default App;
+

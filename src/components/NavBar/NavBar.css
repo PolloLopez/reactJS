@@ -3,17 +3,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: .5rem;
     max-height: 30vh;
     font-size: 1em;
     color: white;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+.logo {
+    width: 8em;
+}
+
 .categories {
     display: flex;
     gap: 1rem;
     font-size: 1em;
+    flex-wrap: wrap;
 }
 
 .category {
@@ -55,4 +59,54 @@
 
 .iconWhite {
     color: white;
+}
+
+
+
+@media (max-width: 768px) {
+    .navBar {
+        padding: .5em;
+        text-align: center;
+    }
+
+    .logo {
+        width: 5em;
+    }
+
+    .categories {
+        justify-content: center;
+        gap: 0.75rem;
+    }
+
+    .category {
+        font-size: .75em;
+        padding: 0.25em;
+    }
+
+    .cartwidget {
+        margin-right: 0;
+        justify-content: center;
+        margin-top: .25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navBar {
+        padding: .5rem;
+    }
+
+    .categories {
+
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .category {
+        font-size: 0.8em;
+        padding: 0.3em;
+    }
+
+    .cartwidget p {
+        font-size: 1.2em;
+    }
 }

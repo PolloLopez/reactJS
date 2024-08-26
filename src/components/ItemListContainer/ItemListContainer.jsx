@@ -26,7 +26,6 @@ const ItemListContainer = ({ saludo }) => {
       console.log(error);
     }
   };
-
   const getProductsByCategory = async () => {
     try {
       const productosRef = collection(db, "productos");
@@ -38,12 +37,15 @@ const ItemListContainer = ({ saludo }) => {
       });
 
       setProductos(data);
+      setEstaCargando(false);
     } catch (error) {
       console.log(error);
+      setEstaCargando(false);
     }
   };
 
   useEffect(() => {
+    console.log("ID de la categoría:", idCategoria);
     setEstaCargando(true);
     if (idCategoria) {
       getProductsByCategory();

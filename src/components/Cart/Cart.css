@@ -14,15 +14,16 @@
 .carritoProducto {
     display: flex;
     align-items: center;
-    gap: 2vh;
+    gap: 2em;
+    margin: auto;
     padding: 1em;
-    border-bottom: 1ox solid #ddd;
+    border-bottom: 1px solid #500550f6;
 }
 
 .carritoItem {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     text-align: center;
     gap: .5em;
 }
@@ -37,7 +38,7 @@
 
 .btn {
     display: flex;
-    padding: .5em .5em;
+    padding: .5em .25em;
     border-radius: .5em;
     color: white;
     background-color: #500550f6;
@@ -46,8 +47,8 @@
     /* Alineación horizontal */
     align-items: center;
     /* Alineación vertical */
-    font-size: 1.1em;
-    max-width: 50%;
+    font-size: 1em;
+    max-width: 40%;
     margin: auto;
     margin-bottom: 1em;
     cursor: pointer;
@@ -63,4 +64,12 @@
 .VaciarCarrito {
     width: 25vh;
     margin-top: 1em;
+}
+
+.precioTotal{
+    font-size: 1.5em;
+    margin: auto;
+    padding: .25em;
+    text-align: center;
+    color: #500550f6;
 }

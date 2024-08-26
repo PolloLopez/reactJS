@@ -29,6 +29,9 @@ const ItemDetail = ({ producto }) => {
           Ir al carrito
         </Link>
       )}
+      <Link to="/" className="btn">
+        Seguir comprando
+      </Link>
     </div>
   );
 };

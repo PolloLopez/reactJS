@@ -39,13 +39,13 @@ const Cart = () => {
                 onClick={() => borrarProducto(productoCarrito.id)}
                 className="btn"
               >
-                Borrar
+                Quitar
               </button>
             </div>
           </li>
         ))}
 
-        <h2>Precio Total: {precioTotal()}</h2>
+        <h2 className="precioTotal">Precio Total: {precioTotal()}</h2>
         <button onClick={vaciarCarrito} className="btn">
           Vaciar Carrito
         </button>

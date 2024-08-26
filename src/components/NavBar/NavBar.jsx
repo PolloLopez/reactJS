@@ -1,19 +1,14 @@
 import "./NavBar.css";
 import CartWidget from "./CartWidget";
 import logoParamo from "../../img/logoParamo.png";
-import {
-  PiWineDuotone,
-  PiBrandyLight,
-  PiGift,
-  PiNotEquals,
-} from "react-icons/pi";
+import { PiWineDuotone, PiBrandyLight, PiGift } from "react-icons/pi";
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <nav className="navBar">
-      <Link to="/" className="logo">
-        <img src={logoParamo} width={150} alt="" />
+      <Link to="/">
+        <img src={logoParamo} alt="Logo negocio" className="logo" />
       </Link>
 
       <ul className="categories">
