@@ -3,31 +3,39 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-height: 30vh;
+    text-align: center;
+    max-height: 20vh;
     font-size: 1em;
     color: white;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
-    width: 8em;
+    display: flex;
+    width: 6em;
+    align-items: center;
+    margin: auto;
+    padding: .25em;
 }
 
 .categories {
     display: flex;
-    gap: 1rem;
+    margin: .5em;
     font-size: 1em;
-    flex-wrap: wrap;
+    height: auto;
+    align-items: center;
+    gap: .5em;
 }
 
 .category {
     text-transform: uppercase;
     color: white;
-    padding: 0.5em .5em;
+    padding: 0.25em .25em;
     border-radius: .5em;
     border-radius: 0.5em;
     background-color: #6c0d84;
     transition: background-color 0.3s ease;
+    width: 7em;
 
     &:hover {
         background-color: #8c10aa;
@@ -35,16 +43,34 @@
     }
 }
 
+.category p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    font-size: .75em;
+    gap: 2em;
+
+}
+
 .cartwidget {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: .5rem;
-    margin-right: 1em;
+}
+
+.carrito {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    font-size: 2.5em;
 }
 
 .cartwidget p {
     font-size: 1.5em;
-    margin: 0;
+    margin-right: .25em;
 }
 
 .img-category {
@@ -64,49 +90,79 @@
 
 
 @media (max-width: 768px) {
-    .navBar {
-        padding: .5em;
-        text-align: center;
+    .logo {
+        display: flex;
+        width: 5.5em;
+        align-items: center;
+        margin: auto;
+        padding: none;
     }
 
-    .logo {
-        width: 5em;
+    .navBar {
+        padding: .25em;
+        text-align: center;
     }
 
     .categories {
         justify-content: center;
-        gap: 0.75rem;
+        gap: 0.5em;
+        margin: none;
     }
 
     .category {
         font-size: .75em;
-        padding: 0.25em;
+        padding: .25em;
     }
 
     .cartwidget {
         margin-right: 0;
         justify-content: center;
-        margin-top: .25rem;
+
     }
 }
 
 @media (max-width: 480px) {
     .navBar {
-        padding: .5rem;
+        padding: .25rem;
+    }
+
+    .logo {
+        display: flex;
+        width: 3.5em;
+        align-items: center;
+        margin: auto;
+        padding: none;
     }
 
     .categories {
-
-        gap: 0.5rem;
-        align-items: center;
+        margin: auto;
     }
 
     .category {
         font-size: 0.8em;
-        padding: 0.3em;
+        padding: 0.05em .05em;
+        width: 6.5vh;
+    }
+
+    .category p {
+        display: none;
+    }
+
+    .carrito {
+        display: flex;
+        align-items: center;
+        font-size: 1.5em;
+    }
+
+    .cartwidget {
+        font-size: 1.2em;
+        margin-right: .1em;
     }
 
     .cartwidget p {
-        font-size: 1.2em;
+        font-size: .75em;
+        padding: none;
     }
+
+
 }

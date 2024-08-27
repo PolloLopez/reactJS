@@ -37,7 +37,7 @@ const Cart = () => {
               </p>
               <button
                 onClick={() => borrarProducto(productoCarrito.id)}
-                className="btn"
+                className="btn quitar"
               >
                 Quitar
               </button>
@@ -49,7 +49,7 @@ const Cart = () => {
         <button onClick={vaciarCarrito} className="btn">
           Vaciar Carrito
         </button>
-        <Link to="/checkout" className="btn">
+        <Link to="/checkout" className="btn continua">
           Continuar compra
         </Link>
       </ul>
