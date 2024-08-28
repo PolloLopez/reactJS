@@ -29,7 +29,7 @@ const ItemDetail = ({ producto }) => {
           Ir al carrito
         </Link>
       )}
-      <Link to="/" className="btn">
+      <Link to="/" className="btn seguir">
         Seguir comprando
       </Link>
     </div>

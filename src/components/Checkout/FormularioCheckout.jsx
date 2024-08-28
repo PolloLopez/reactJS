@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import "./Formulario.css";
+
 const FormularioCheckout = ({
   datosForm,
   handleChangeInput,
@@ -23,9 +25,10 @@ const FormularioCheckout = ({
   };
 
   return (
-    <form onSubmit={handleFormSubmit}>
-      <label>Nombre: </label>
+    <form onSubmit={handleFormSubmit} className="formulario">
+      <label className="formLabel">Nombre: </label>
       <input
+        className="formInput"
         type="text"
         name="nombre"
         value={datosForm.nombre}
@@ -33,8 +36,9 @@ const FormularioCheckout = ({
         required
       />
 
-      <label>Teléfono: </label>
+      <label className="formLabel">Teléfono: </label>
       <input
+        className="formInput"
         type="text"
         name="telefono"
         value={datosForm.telefono}
@@ -42,8 +46,9 @@ const FormularioCheckout = ({
         required
       />
 
-      <label>Email: </label>
+      <label className="formLabel">Email: </label>
       <input
+        className="formInput"
         type="email"
         name="email"
         value={datosForm.email}
@@ -51,8 +56,9 @@ const FormularioCheckout = ({
         required
       />
 
-      <label>Repetir Email: </label>
+      <label className="formLabel">Repetir Email: </label>
       <input
+        className="formInput"
         type="email"
         value={emailRepeat}
         onChange={handleEmailRepeatChange}
@@ -61,7 +67,7 @@ const FormularioCheckout = ({
 
       {error && <p style={{ color: "red" }}>{error}</p>}
 
-      <button type="submit" className="btn">
+      <button type="submit" className="btn enviarPedido">
         Enviar pedido
       </button>
     </form>

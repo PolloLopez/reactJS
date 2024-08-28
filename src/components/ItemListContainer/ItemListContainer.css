@@ -2,11 +2,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 30em;
-    height: 45em;
+    /* width: 100%; */
+    /* max-width: 20%; */
     border: solid 1px #ddd;
     border-radius: 1em;
-    padding: 1em;
+    padding: .75em;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
 }
@@ -14,15 +14,7 @@
 .img-card {
     flex: 1;
     width: 100%;
-    height: 20em;
     overflow: hidden;
-    border-radius: 1em;
-}
-
-.img-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
     border-radius: 1em;
 }
 
@@ -30,13 +22,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 25em;
-    max-width: 60%;
+    width: 100%;
     height: auto;
     margin: auto;
     margin-bottom: 1em;
     border-radius: 1em;
     overflow: hidden;
+}
+
+.tituloProducto, .descripcionProducto, .cantProductos, .contador, .btnCount, .detalles-container {
+    text-align: center;
+    margin: 0.5em auto;
+}
+
+.img-card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1em;
+    background-color: none;
+    object-fit: contain;
+    max-height: 50vh;
 }
 
 .tituloProducto {
@@ -91,19 +96,19 @@
     font-size: .9em;
     cursor: pointer;
     transition: all 0.3s ease;
+}
 
-    &:hover {
-        background-color: white;
-        color: #500550f6;
-        border: 1px solid black;
-    }
+.btnAgregarCount:hover {
+    background-color: white;
+    color: #500550f6;
+    border: 1px solid black;
 }
 
 .detalles-container {
     display: flex;
     justify-content: center;
-    margin-top: auto;
-    /* Empuja el botón hacia abajo */
+    margin: 0.5em auto;
+    width: 75%;
 }
 
 .detalles {
@@ -112,12 +117,12 @@
     border-radius: .5em;
     border: 1px solid black;
     cursor: pointer;
-    padding: .5em .5em;
+    padding: .25em .25em;
     font-size: 1em;
     cursor: pointer;
     text-transform: uppercase;
     text-align: center;
-    width: 50%;
+    width: 75%;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -135,18 +140,159 @@
 .saludo {
     text-align: center;
     font-size: 1.5em;
+    margin-bottom: 1em;
 }
 
 .cargando {
     padding: 5px;
     font-size: 1.5em;
-    margin-left: 1rem;
+    text-align: center
 }
 
+/* Contenedor de la lista */
 .listaGeneral {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2em;
-    padding: .5em;
+    gap: 1em;
+    padding: .25em;
+}
+
+
+/* Responsive cards */
+
+/* Escritorio - 4 columnas */
+@media (min-width: 1025px) {
+    .card {
+        flex: 1 1 calc(25% - 2em);
+    }
+}
+
+/* Tablet - 3 columnas */
+@media (max-width: 1024px) {
+    .card {
+        flex: 1 1 calc(33.33% - 2em);
+    }
+}
+
+
+
+
+
+
+/* Móviles grandes - 2 columnas */
+@media (max-width: 768px) {
+    .listaGeneral {
+        gap: .5em;
+        padding: .1em;
+    }
+    .card {
+        flex: 1 1 calc(50% - 2em);
+    }
+    .img-card img {
+    border-radius: .5em;
+    object-fit: contain;
+    }
+    
+    .tituloProducto {
+        margin: 0;
+        font-size: 1.5em;
+        padding: 0;
+    }
+
+    .imgProducto{
+    max-height: 50vh;
+    margin: auto;
+    margin-bottom: .25em;
+    object-fit: contain;
+    
+}
+    .descripcionProducto {
+        text-align: center;
+        font-size: 1em;
+        max-width: 75%;
+        margin: auto;
+    }
+    
+    .cantProductos {
+        padding: 0;
+        margin: auto;
+    }
+    
+    .contador {
+        gap: .01em;
+        margin: auto;
+        margin-bottom: .5em;
+        font-size: 1em;
+        max-width: 40%;
+    }
+    
+    .btnCount {
+        padding: .4em;
+        border-radius: .5em;
+        margin: auto;
+        margin-inline: .75em;
+
+    }
+    
+    .btnAgregarCount {
+        padding: .5em .5em;
+    }
+    
+    .btn.seguir{
+        width: 40%;
+    }
+    
+    .detalles-container {
+        margin: auto;
+        padding: none;
+        font-size: 1em;
+        width: 75%;
+
+    }
+    
+    .detalles {
+        padding: .25em .25em;
+        font-size: .75em;
+        width: 100%;
+    }
+    
+    .detalles:hover {
+        background-color: #720172af;
+        color: white;
+        font-weight: bolder;
+    }
+    
+    .card p {
+        font-size: 1em;
+        padding: .5em;
+    }
+    
+    .saludo {
+        text-align: center;
+        font-size: 1.5em;
+        margin-bottom: 1em;
+    }
+    
+    .cargando {
+        padding: 5px;
+        font-size: 1.5em;
+        text-align: center
+    }
+
+}
+
+
+
+
+
+
+
+
+
+/* Móviles pequeños - 1 columna */
+@media (max-width: 420px) {
+    .card {
+        flex: 1 1 100%;
+    }
 }
