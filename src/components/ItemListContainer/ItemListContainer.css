@@ -28,9 +28,16 @@
     margin-bottom: 1em;
     border-radius: 1em;
     overflow: hidden;
+    object-fit: contain;
 }
 
-.tituloProducto, .descripcionProducto, .cantProductos, .contador, .btnCount, .detalles-container {
+.tituloProducto,
+.descripcionProducto,
+.precioProductos,
+.cantidadProductos,
+.contador,
+.btnCount,
+.detalles-container {
     text-align: center;
     margin: 0.5em auto;
 }
@@ -58,10 +65,11 @@
     margin: auto;
 }
 
-.cantProductos {
+.precioProductos {
     text-align: center;
     padding: .5em;
     font-size: 1.5em;
+    font-weight: 600;
 }
 
 .contador {
@@ -85,6 +93,12 @@
 .btnCount:hover {
     background-color: black;
     color: white;
+}
+
+.cantidadProductos{
+    font-size: 1.75em;
+    padding: .2em;
+    font-size: 600;
 }
 
 .btnAgregarCount {
@@ -166,83 +180,17 @@
     .card {
         flex: 1 1 calc(25% - 2em);
     }
-}
-
-/* Tablet - 3 columnas */
-@media (max-width: 1024px) {
-    .card {
-        flex: 1 1 calc(33.33% - 2em);
-    }
-}
-
-
-
-
-
-
-/* Móviles grandes - 2 columnas */
-@media (max-width: 768px) {
-    .listaGeneral {
-        gap: .5em;
-        padding: .1em;
-    }
-    .card {
-        flex: 1 1 calc(50% - 2em);
-    }
-    .img-card img {
-    border-radius: .5em;
-    object-fit: contain;
-    }
     
     .tituloProducto {
+        display: flex;
+        justify-content: center;
         margin: 0;
-        font-size: 1.5em;
+        font-size: 2em;
         padding: 0;
+        text-wrap: nowrap;
+        max-width: 100%;
     }
 
-    .imgProducto{
-    max-height: 50vh;
-    margin: auto;
-    margin-bottom: .25em;
-    object-fit: contain;
-    
-}
-    .descripcionProducto {
-        text-align: center;
-        font-size: 1em;
-        max-width: 75%;
-        margin: auto;
-    }
-    
-    .cantProductos {
-        padding: 0;
-        margin: auto;
-    }
-    
-    .contador {
-        gap: .01em;
-        margin: auto;
-        margin-bottom: .5em;
-        font-size: 1em;
-        max-width: 40%;
-    }
-    
-    .btnCount {
-        padding: .4em;
-        border-radius: .5em;
-        margin: auto;
-        margin-inline: .75em;
-
-    }
-    
-    .btnAgregarCount {
-        padding: .5em .5em;
-    }
-    
-    .btn.seguir{
-        width: 40%;
-    }
-    
     .detalles-container {
         margin: auto;
         padding: none;
@@ -250,34 +198,287 @@
         width: 75%;
 
     }
-    
+
     .detalles {
         padding: .25em .25em;
         font-size: .75em;
         width: 100%;
     }
-    
+
     .detalles:hover {
         background-color: #720172af;
         color: white;
         font-weight: bolder;
     }
     
+    .imgProducto {
+        display: flex;
+        width: 100%;
+        max-height: 50vh;
+        margin: auto;
+        margin-bottom: .5em;
+    }
+
+    .descripcionProducto {
+        text-align: center;
+        font-size: 1em;
+        max-width: 75%;
+        margin: auto;
+        margin-bottom: 1em;
+    }
+
+    .precioProductos {
+        font-size: 2.5em;
+        padding: 0;
+        margin: auto;
+    }
+    .cantidadProductos{
+        font-size: 1.75em;
+        padding: .2em;
+        font-size: 600;
+        margin: 0;
+    }
+
+    .contador {
+        gap: .01em;
+        margin: auto;
+        margin-bottom: .5em;
+        font-size: 1em;
+        max-width: 40%;
+    }
+
+    .btnCount {
+        padding: .4em;
+        border-radius: .5em;
+        margin: auto;
+        margin-inline: .75em;
+
+    }
+
+    .btnAgregarCount {
+        padding: .8em 1em;
+    }
+
+    .btn.seguir {
+        width: 25%;
+    }
+
     .card p {
         font-size: 1em;
         padding: .5em;
     }
-    
+
     .saludo {
         text-align: center;
         font-size: 1.5em;
         margin-bottom: 1em;
     }
+
+
+}
+
+/* Tablet - 3 columnas */
+@media (max-width: 1024px) {
+
+        .card {
+        flex: 1 1 calc(33.33% - 2em);
+    }
+
+
+    .tituloProducto {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        font-size: 2em;
+        padding: 0;
+        text-wrap: nowrap;
+        max-width: 100%;
+    }
+
+    .detalles-container {
+        margin: auto;
+        padding: none;
+        font-size: 1em;
+        width: 75%;
+
+    }
+
+    .detalles {
+        padding: .25em .25em;
+        font-size: .75em;
+        width: 100%;
+    }
+
+    .detalles:hover {
+        background-color: #720172af;
+        color: white;
+        font-weight: bolder;
+    }
     
-    .cargando {
-        padding: 5px;
+    .imgProducto {
+        display: flex;
+        width: 100%;
+        max-height: 50vh;
+        margin: auto;
+        margin-bottom: .5em;
+    }
+
+    .descripcionProducto {
+        text-align: center;
+        font-size: 1em;
+        max-width: 75%;
+        margin: auto;
+        margin-bottom: 1em;
+    }
+
+    .precioProductos {
+        font-size: 2.5em;
+        padding: 0;
+        margin: auto;
+    }
+    .cantidadProductos{
+        font-size: 1.75em;
+        padding: .2em;
+        font-size: 600;
+        margin: 0;
+    }
+
+    .contador {
+        gap: .01em;
+        margin: auto;
+        margin-bottom: .5em;
+        font-size: 1em;
+        max-width: 40%;
+    }
+
+    .btnCount {
+        padding: .4em;
+        border-radius: .5em;
+        margin: auto;
+        margin-inline: .75em;
+
+    }
+
+    .btnAgregarCount {
+        padding: .8em 1em;
+    }
+
+    .btn.seguir {
+        width: 40%;
+    }
+
+
+
+    .card p {
+        font-size: 1em;
+        padding: .5em;
+    }
+
+    .saludo {
+        text-align: center;
         font-size: 1.5em;
-        text-align: center
+        margin-bottom: 1em;
+    }
+
+}
+
+/*                       Móviles grandes - 2 columnas */
+@media (max-width: 768px) {
+    .listaGeneral {
+        gap: .5em;
+        padding: .1em;
+    }
+
+    .card {
+        flex: 1 1 calc(50% - 2em);
+    }
+
+    .img-card img {
+        border-radius: .5em;
+        object-fit: contain;
+    }
+
+    .tituloProducto {
+        margin: 0;
+        font-size: 1.5em;
+        padding: 0;
+    }
+
+    .imgProducto {
+        max-height: 50vh;
+        margin: auto;
+        margin-bottom: .25em;
+        object-fit: contain;
+    }
+
+    .descripcionProducto {
+        text-align: center;
+        font-size: 1em;
+        max-width: 75%;
+        margin: auto;
+    }
+
+    .precioProductos {
+        padding: 0;
+        font-size: 2em;
+        margin: auto;
+    }
+    .cantidadProductos{
+        font-size: 1.5em;
+    }
+
+    .contador {
+        gap: .01em;
+        margin: auto;
+        margin-bottom: .5em;
+        font-size: 1em;
+        max-width: 40%;
+    }
+
+    .btnCount {
+        padding: .4em;
+        border-radius: .5em;
+        margin: auto;
+        margin-inline: .75em;
+
+    }
+
+    .btnAgregarCount {
+        padding: .5em .5em;
+    }
+
+    .btn.seguir {
+        width: 40%;
+    }
+
+    .detalles-container {
+        margin: auto;
+        padding: none;
+        font-size: 1em;
+        width: 75%;
+    }
+
+    .detalles {
+        padding: .25em .25em;
+        font-size: .75em;
+        width: 100%;
+    }
+
+    .detalles:hover {
+        background-color: #720172af;
+        color: white;
+        font-weight: bolder;
+    }
+
+    .card p {
+        font-size: 1em;
+        padding: .5em;
+    }
+
+    .saludo {
+        text-align: center;
+        font-size: 2em;
+        margin-bottom: 1em;
     }
 
 }

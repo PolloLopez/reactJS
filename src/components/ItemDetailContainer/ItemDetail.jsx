@@ -21,7 +21,7 @@ const ItemDetail = ({ producto }) => {
       <img className="imgProducto" src={producto.imagen} alt="" />
       <h2 className="tituloProducto">{producto.nombre}</h2>
       <p className="descripcionProducto">{producto.descripcion}</p>
-      <p className="cantProductos">Precio: ${producto.precio}</p>
+      <p className="precioProductos">Precio: ${producto.precio}</p>
       {mostrarItemCount ? (
         <ItemCount stock={producto.stock} agregarAlCarrito={agregarAlCarrito} />
       ) : (
